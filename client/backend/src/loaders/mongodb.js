@@ -26,7 +26,7 @@ module.exports = async () => {
     });
     db.on('disconnected', () => {
       log.warn('MongoDB disconnected!');
-      connection = mongoose.connect(configs.db.DB_URL, configs.db.DB_OPTIONS);
+      connection = mongoose.connect(configs.db.DB_HOST, configs.db.DB_OPTIONS);
     });
 
     db.on('error', error => {
@@ -34,7 +34,7 @@ module.exports = async () => {
       mongoose.disconnect();
     });
     connection = await mongoose.connect(
-      configs.db.DB_URL,
+      configs.db.DB_HOST,
       configs.db.DB_OPTIONS,
       err => {
         if (err) throw new Error('Failed to connect to db');

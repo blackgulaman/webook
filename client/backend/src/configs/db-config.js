@@ -2,10 +2,10 @@
 exports.DB_NAME = process.env.DB_NAME || 'webook';
 
 // Port of the database
-exports.PORT = process.env.PORT || 27017;
+exports.PORT = process.env.DB_PORT || 27017;
 
 // Url of the database
-exports.DB_URL = `mongodb://localhost:${exports.PORT}/${exports.DB_NAME}`;
+exports.DB_HOST = `mongodb://localhost:${exports.PORT}/${exports.DB_NAME}`;
 
 // Configuration of database
 exports.DB_OPTIONS = {

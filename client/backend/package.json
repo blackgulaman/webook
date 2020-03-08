@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node -r dotenv/config bin/www.js"
+    "dev": "node bin/development.js",
+    "prod": "node bin/development.js"
   },
   "keywords": [],
   "author": "",
