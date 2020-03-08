@@ -8,6 +8,12 @@
 
 **3.** Start the server development(dev)|production(prod) by typing this command
 
-## npm run dev
+###### npm run dev
 
-## npm run prod
+###### npm run prod
+
+**3.** Access the server via url
+HTTP server
+###### http -> http:localhost:9000/client
+HTTPS server
+###### https -> https:localhost:9000/client
