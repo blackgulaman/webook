@@ -1,3 +1,7 @@
+const dotenv = require('dotenv').config();
+if (dotenv.error) throw dotenv.error;
+console.log(process.env.DB_NAME);
+
 (async () => {
   // Imports all the modules that is needed
   const express = require('express');
