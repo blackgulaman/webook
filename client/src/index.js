@@ -9,13 +9,12 @@
   await require('./loaders')({ app });
 
   // Initialize the service to be run
-  const service = configs.app.isHttp
-    ? require('http').Server(app)
-    : require('https').createServer(configs.express.certificates, app);
+  const service = configs.app.isHttp ?
+    require('http').Server(app) :
+    require('https').createServer(configs.express.certificates, app);
 
   // It will run now the service with dedicated port
   service.listen(configs.app.port, error => {
-    console.log(error)
     if (error) {
       log.error('Error running the service!');
       throw new Error('Error running the service!');
